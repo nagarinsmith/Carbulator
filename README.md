@@ -1,4 +1,4 @@
-## Website for tracking and managing type I and II diabetes.
+## Website for tracking and managing type I and II diabetes
 
 ### Contributors: 
 * Gabriel Mihai Matko
