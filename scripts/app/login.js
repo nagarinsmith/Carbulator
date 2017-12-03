@@ -1,20 +1,20 @@
 $(document).ready(function(){
+    
     $("#loginButton").click(function(){
-        firebase.auth().signInWithEmailAndPassword("root@gmail.com", "root12").catch(function(error) {
+        var email = $("#email").val();
+        var password = $("#password").val();
+        firebase.auth().signInWithEmailAndPassword(email, password).then(function(user){
+            window.location.href = "post-login.html";
+        }).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
-            // ...
-            console.log(errorMessage);
-        });
-       
-    })
-
-    $("#logoutButton").click(function(){
-        firebase.auth().signOut().then(function() {
-        // Sign-out successful.
-        }).catch(function(error) {
-        // An error happened.
+            if(errorCode == "auth/user-not-found" || errorCode == "auth/wrong-password")
+            {
+                $("#errorLabel").html("Invalid password or email");
+                $("#email").val("");
+                $("#password").val("")
+            }
         });
     })
 
