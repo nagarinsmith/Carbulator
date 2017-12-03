@@ -4,8 +4,8 @@ $(document).ready(function(){
 
         var email = $("#email").val();
         var password = $("#password").val();
-        var repassword = $("re-password").val();
-
+        var repassword = $("#repassword").val();
+	
         if(email && password && password == repassword){
             firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
             window.location.href = "configure-account.html";
@@ -14,7 +14,7 @@ $(document).ready(function(){
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
-            
+            console.log(errorMessage);
             });
         }
         
