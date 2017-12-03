@@ -14,7 +14,7 @@
     </nav>
 
     <!-- Form container -->
-    <form class="container col-md-4 offset-md-4">
+    <div class="container col-md-4 offset-md-4">
         <h3 class="mt-4 mb-2">Login to Carbulator</h3>
         <div class="form-group">
             <input type="email" class="form-control" id="email" placeholder="Email Address">
@@ -23,10 +23,12 @@
             <input type="password" class="form-control" id="password" placeholder="Password">
         </div>
         <button id="loginButton" class="btn btn-block btn-primary">Login</button>
+        <button id="logoutButton" class="btn btn-block btn-primary">Logout</button>
         <button type="button" class="btn btn-block btn-secondary" data-toggle="modal" data-target="#exampleModal">
             Register
         </button>
-    </form>
+    </div>
+    <p id="errorLabel"> error label<p>
 </body>
 
 
