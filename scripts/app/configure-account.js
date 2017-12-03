@@ -6,11 +6,14 @@ $(document).ready(function(){
         var last_name_in = $("#last_name").val();
         var age_in = $("#age").val();
         if(user && first_name_in && last_name_in && age_in){
-            user.updateProfile({
-            first_name : first_name_in,
-            last_name : last_name_in,
-            age : age_in
-        })
+            firebase.database().ref('users/' + user.uid).set({
+                first_name: first_name_in,
+                last_name : last_name_in,
+                age : age_in
+            }).catch(function(error){
+                console.log(error);
+            })
+        
         
             window.location.href = "post-login.html";
         }
