@@ -5,7 +5,6 @@ function checkNewValues(){
             $("#values").empty();
                for(e in snapshot.val()){
                    firebase.database().ref("/users").child(user.uid).child("glicValues").child(e).on("value",function(snap){
-                        $("#values").append(snap.val().val + " ");
                         if(snap.val().val > 120 && Date.now() - snap.val().time < 10000){
                             alert("High");    
                         }    
@@ -14,10 +13,14 @@ function checkNewValues(){
         
             });
         }
+        else{
+            console.log('in');
+        }
     });
     
 }
 
 $(document).ready(function(){
-    checkNewValues();
+    console.log('in');
+   
 });

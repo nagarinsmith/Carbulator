@@ -23,6 +23,15 @@ app.config(function($routeProvider) {
     .when("/drj",{
         templateUrl : "./drjn_style42/styleCalc.html"
     })
+    .when("/chart", {
+        templateUrl : "./pages/chart.html"
+    })
+    .when("/viewValues", {
+        templateUrl : "./pages/viewValues.html"
+    })
+    .when("/addValues", {
+        templateUrl : "./pages/add-values.html"
+    })
     /*.otherwise({
         templateUrl : "./pages/not-found.html"
     })*/
