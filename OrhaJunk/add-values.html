@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Add values"/>
+    <meta name="author" content="Paul-Claudiu Orha"/>
+    <link rel="icon" href="http://via.placeholder.com/32x32">
+    <title>Login</title>
+    <link rel="stylesheet" href="bootstrap4.min.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="#"><img src="http://via.placeholder.com/100x100" width="30" height="30"
+                                          class="d-inline-block align-top mr-2" alt="">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#">Calculator</a>
+            <a class="nav-item nav-link active" href="#">Add values</a>
+            <a class="nav-item nav-link" href="#">Statistics</a>
+            <a class="nav-item nav-link" href="#">Log out</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Add values -->
+<div class="container-fluid">
+    <div class="row mt-3 align-content-center">
+        <form id="add_value_form" class="col-md-6">
+            <div class="form-group">
+                <label for="add_value">Add value:</label>
+                <input type="number" class="form-control" id="add_value">
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Add</button>
+        </form>
+        <form id="generate_form" class="col-md-6">
+            <button type="submit" class="btn btn-block btn-primary">Generate</button>
+            <div id="surprinde-ma"></div>
+        </form>
+    </div>
+</div>
+</body>
+
+
+<!-- Scripts -->
+<script src="jquery-3.2.1.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap4.min.js"></script>
+</html>
