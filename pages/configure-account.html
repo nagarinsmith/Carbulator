@@ -47,24 +47,20 @@
 
         <form style="display:none" id="glicForm" class="col-12 col-sm-8 col-md-6 col-lg-4">
             <div class="form-group">
-                <label for="glic_min">Minimum glucose target level:</label>
-                <input type="number" class="form-control" id="glic_min">
+                <label for="glic_min">Target blood sugar:</label>
+                <input type="number" class="form-control" id="bl_target">
             </div>
             <div class="form-group">
-                <label for="glic_max">Maximum glucose target level:</label>
-                <input type="number" class="form-control" id="glic_max">
+                <label for="glic_max">Carbs to insulin ratio:</label>
+                <input type="number" class="form-control" id="carbs_to_insulin">
             </div>
             <div class="form-group">
-                <label for="glic_target">Optimal glucose target level:</label>
-                <input type="number" class="form-control" id="glic_target">
+                <label for="glic_target">Blood sugar to insulin ratio:</label>
+                <input type="number" class="form-control" id="bl_to_insulin">
             </div>
             <div class="form-group">
-                <label for="carb_insulin_ratio">Amount of carbs for 1 unit of insulin:</label>
-                <input type="number" class="form-control" id="carb_insulin_ratio">
-            </div>
-            <div class="form-group">
-                <label for="glucose_insulin_ratio">Amount of mg/dl dropped for 1 unit of insulin:</label>
-                <input type="number" class="form-control" id="glucose_insulin_ratio">
+                <label for="carb_insulin_ratio">Insulin precision:</label>
+                <input type="number" class="form-control" id="insulin_precision">
             </div>
             <button class="btn btn-block btn-primary" id="backButton">Back</button>
             <button type="submit" class="btn btn-block btn-primary" id="submitButton">Submit</button>

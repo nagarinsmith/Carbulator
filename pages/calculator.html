@@ -28,44 +28,49 @@
 </nav>
 
 <!-- Calculator -->
-<div class="container row justify-content-center mt-3">
-    <form class="col-md-6">
-        <div class="form-group">
-            <label for="carbs">Carbs:</label>
-            <input type="text" class="form-control" id="carbs">
-        </div>
-        <div class="form-group">
-            <label for="bl">Blood sugar:</label>
-            <input type="text" class="form-control" id="bl">
-        </div>
-        <button type="submit" class="btn btn-block btn-primary">Calculate</button>
-        <div class="form-group">
-            <label for="insulin">Recommended insulin:</label>
-            <input type="text" class="form-control" id="insulin">
-        </div>
-    </form>
+<div class="container-fluid">
+    <div class="row mt-3 align-content-center">
+        <form class="col-md-6" id = "calculator_form">
+            <div class="form-group">
+                <label for="carbs">Carbs:</label>
+                <input type="text" class="form-control" id="carbs">
+            </div>
+            <div class="form-group">
+                <label for="bl">Blood sugar:</label>
+                <input type="text" class="form-control" id="bl">
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Calculate</button>
+            <div class="form-group">
+                <label for="insulin">Recommended insulin:</label>
+                <input type="text" readonly class="form-control-plaintext" id="insulin">
+            </div>
+        </form>
 
-    <form class="col-md-6">
-        <div class="form-group">
-            <label for="bl_target">Target blood sugar:</label>
-            <input type="text" class="form-control" id="bl_target">
-        </div>
-        <div class="form-group">
-            <label for="carbs_to_insulin">Carbs to insulin ratio:</label>
-            <input type="text" class="form-control" id="carbs_to_insulin">
-        </div>
-        <div class="form-group">
-            <label for="bl_to_insulin">Blood sugar to insulin ratio:</label>
-            <input type="text" class="form-control" id="bl_to_insulin">
-        </div>
-        <div class="form-group">
-            <label for=insulin_precision>Insulin precision:</label>
-            <input type="text" class="form-control" id="insulin_precision">
-        </div>
-        <button type="submit" class="btn btn-block btn-primary">Save</button>
-    </form>
+        <form class="col-md-6" id = "configure_form">
+            <div class="form-group">
+                <label for="bl_target">Target blood sugar:</label>
+                <input type="text" class="form-control" id="bl_target">
+            </div>
+            <div class="form-group">
+                <label for="carbs_to_insulin">Carbs to insulin ratio:</label>
+                <input type="text" class="form-control" id="carbs_to_insulin">
+            </div>
+            <div class="form-group">
+                <label for="bl_to_insulin">Blood sugar to insulin ratio:</label>
+                <input type="text" class="form-control" id="bl_to_insulin">
+            </div>
+            <div class="form-group">
+                <label for="insulin_precision">Insulin precision</label>
+                <select class="form-control" id="insulin_precision">
+                    <option>1</option>
+                    <option>0.5</option>
+                    <option>0.1</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Save</button>
+        </form>
+    </div>
 </div>
-
 
 <script src="scripts/lib/jquery-3.2.1.min.js"></script>
 <script src="scripts/lib/firebase.js"></script>
@@ -73,6 +78,7 @@
 <script src="scripts/app/authCheck.js"></script>
 <script src="scripts/app/logout.js"></script>
 <script src="scripts/app/calculator.js"></script>
+
 </body>
 
 </html>

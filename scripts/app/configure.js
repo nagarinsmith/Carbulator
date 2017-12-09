@@ -33,13 +33,12 @@ $(document).ready(function () {
         var first_name_in = $("#first_name").val();
         var last_name_in = $("#last_name").val();
         var age_in = $("#age").val();
-        var glic_min_in = $("#glic_min").val();
-        var glic_max_in = $("#glic_max").val();
-        var glic_target_in = $("#glic_target").val();
-        var carb_insulin_ratio_in = $("#carb_insulin_ratio").val();
-        var glucose_insulin_ratio_in = $("#glucose_insulin_ratio").val();
+        var carbs_to_insulin = $("#carbs_to_insulin").val();
+        var bl_to_insulin = $("#bl_to_insulin").val();
+        var bl_target = $("#bl_target").val();
+        var insulin_precision = $("#insulin_precision").val();
 
-        if(user && first_name_in && last_name_in && age_in && glic_min_in && glic_max_in && glic_target_in && carb_insulin_ratio_in && glucose_insulin_ratio_in){
+        if(user && first_name_in && last_name_in && age_in && carbs_to_insulin&& bl_target && bl_to_insulin && insulin_precision){
             firebase.database().ref('users/' + user.uid).set({
                 first_name: first_name_in,
                 last_name : last_name_in,
@@ -48,16 +47,15 @@ $(document).ready(function () {
                 console.log(error);
             })
             firebase.database().ref('users/' + user.uid + "/glicData").set({
-                glic_min: glic_min_in,
-                glic_max: glic_max_in,
-                glic_target: glic_target_in,
-                carb_insulin_ratio: carb_insulin_ratio_in,
-                glucose_insulin_ratio: glucose_insulin_ratio_in
+                carbs_to_insulin : carbs_to_insulin,
+                bl_to_insulin : bl_to_insulin,
+                bl_target : bl_target,
+                insulin_precision : insulin_precision
             }).catch(function(error){
                 console.log(error);
             }).then(function(){
                 console.log("nextStep2");
-                window.location.href = "../post-login.html";
+                window.location.href = "/post-login";
             })
         }
         else{
