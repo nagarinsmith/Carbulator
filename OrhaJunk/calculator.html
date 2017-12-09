@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Insulin calculator">
+    <meta name="author" content="Paul-Claudiu Orha">
+    <link rel="icon" href="http://via.placeholder.com/32x32">
+    <title>Login</title>
+    <link rel="stylesheet" href="bootstrap4.min.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="#"><img src="http://via.placeholder.com/100x100" width="30" height="30"
+                                          class="d-inline-block align-top mr-2" alt="">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Calculator</a>
+            <a class="nav-item nav-link" href="#">Statistics</a>
+            <a class="nav-item nav-link" href="#">Log out</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Calculator -->
+<div class="container row justify-content-center mt-3">
+    <form class="col-md-6">
+        <div class="form-group">
+            <label for="carbs">Carbs:</label>
+            <input type="text" class="form-control" id="carbs">
+        </div>
+        <div class="form-group">
+            <label for="bl">Blood sugar:</label>
+            <input type="text" class="form-control" id="bl">
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Calculate</button>
+        <div class="form-group">
+            <label for="insulin">Recommended insulin:</label>
+            <input type="text" class="form-control" id="insulin">
+        </div>
+    </form>
+
+    <form class="col-md-6">
+        <div class="form-group">
+            <label for="bl_target">Target blood sugar:</label>
+            <input type="text" class="form-control" id="bl_target">
+        </div>
+        <div class="form-group">
+            <label for="carbs_to_insulin">Carbs to insulin ratio:</label>
+            <input type="text" class="form-control" id="carbs_to_insulin">
+        </div>
+        <div class="form-group">
+            <label for="bl_to_insulin">Blood sugar to insulin ratio:</label>
+            <input type="text" class="form-control" id="bl_to_insulin">
+        </div>
+        <div class="form-group">
+            <label for=insulin_precision>Insulin precision:</label>
+            <input type="text" class="form-control" id="insulin_precision">
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Save</button>
+    </form>
+</div>
+
+
+<script src="jquery-3.2.1.min.js"></script>
+<script src="popper.min.js"></script>
+</body>
+</html>
