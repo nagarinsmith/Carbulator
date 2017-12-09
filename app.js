@@ -3,7 +3,7 @@ app.config(function($routeProvider) {
     
     $routeProvider
     .when("/", {
-        templateUrl : "./pages/login.html"
+        templateUrl : "./pages/post-login.html"
     })
     .when("/login", {
         templateUrl : "./pages/login.html"
@@ -17,20 +17,8 @@ app.config(function($routeProvider) {
     .when("/register", {
         templateUrl : "./pages/register.html"
     })
-    .when("/add-glic", {
-        templateUrl : "./pages/add-values.html"
-    })
-    .when("/drj",{
-        templateUrl : "./drjn_style42/styleCalc.html"
-    })
     .when("/chart", {
         templateUrl : "./pages/chart.html"
-    })
-    .when("/viewValues", {
-        templateUrl : "./pages/viewValues.html"
-    })
-    .when("/addValues", {
-        templateUrl : "./pages/add-values.html"
     })
     .when("/calculate", {
         templateUrl : "./pages/calculator.html"
