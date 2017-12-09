@@ -5,7 +5,7 @@ function checkNewValues(){
             $("#values").empty();
                for(e in snapshot.val()){
                    firebase.database().ref("/users").child(user.uid).child("glicValues").child(e).on("value",function(snap){
-                       $("#values").append("<p>" +  + "</p>");
+                       $("#values").append("<span>" + snap.val().val + "</span>");
                         if(snap.val().val > 120 && Date.now() - snap.val().time < 10000){
                             alert("High");    
                         }    

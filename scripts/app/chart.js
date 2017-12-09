@@ -1,12 +1,9 @@
-$(document).ready(function () {
-var dataPoints = []
-addValues();
-
-var chart = new CanvasJS.Chart("chartContainer", {
+function drawChart(dataPoints,maxPoints,minPoints){
+	var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
-		text: "Site Traffic"
+		text: "Glucose level"
 	},
 	axisX:{
 	
@@ -16,7 +13,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		}
 	},
 	axisY: {
-		title: "Number of Visits",
+		title: "",
 		crosshair: {
 			enabled: true
 		}
@@ -35,26 +32,65 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		type: "line",
 		showInLegend: true,
 		name: "Glucose Level",
-		markerType: "square",
+		markerType: "",
+	
+		color: "#44b044",
+		dataPoints: dataPoints
+
+	},
+	{
+		type: "line",
+		showInLegend: true,
+		name: "Minimum Glucose Level",
+		markerType: "",
 	
 		color: "#F08080",
-		dataPoints: dataPoints
+		dataPoints: minPoints
+	},
+	{
+		type: "line",
+		showInLegend: true,
+		name: "Maximum Glucose Level",
+		markerType: "",
+	
+		color: "#F08080",
+		dataPoints: maxPoints
 	}]
-});
-chart.render();
+	});
+	chart.render();
+
+	function toogleDataSeries(e){
+		if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+			e.dataSeries.visible = false;
+		} else{
+			e.dataSeries.visible = true;
+		}
+		chart.render();
+	}
+
+}
+
+$(document).ready(function () {
+var dataPoints = []
+var maxPoints = []
+var minPoints = []
+addValues();
+
+
 
 function addValues(){
 	firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             firebase.database().ref('/users').child(user.uid).child("glicValues").on('value', function(snapshot) {
+				console.log(snapshot.val());
                for(e in snapshot.val()){
-                   firebase.database().ref("/users").child(user.uid).child("glicValues").child(e).on("value",function(snap){
-						dataPoints.push({x: snap.val().time ,y:snap.val().val});
-						
-                    });
+					var vl = snapshot.val()[e];
+					dataPoints.push({x:vl.time, y:vl.val});
+					minPoints.push({x:vl.time, y:80});
+					maxPoints.push({x:vl.time, y:200});
                }
-        
-            });
+			drawChart(dataPoints,maxPoints,minPoints);
+            })
         }
         else{
             console.log('in');
@@ -62,13 +98,5 @@ function addValues(){
     });
 }
 
-function toogleDataSeries(e){
-	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-		e.dataSeries.visible = false;
-	} else{
-		e.dataSeries.visible = true;
-	}
-	chart.render();
-}
 
 });
