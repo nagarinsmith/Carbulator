@@ -54,12 +54,10 @@ $(document).ready(function () {
             }).catch(function(error){
                 console.log(error);
             }).then(function(){
-                console.log("nextStep2");
+               
                 window.location.href = "/post-login";
             })
         }
-        else{
-            console.log(user,first_name_in,last_name_in,age_in);
-        }
+       
     })
 });

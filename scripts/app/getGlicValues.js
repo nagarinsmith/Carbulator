@@ -14,16 +14,12 @@ function checkNewValues(){
         
             });
         }
-        else{
-            console.log('isn');
-        }
+        
     });
     
 }
 
 $(document).ready(function(){
-    $("#values").append("ss");
-    console.log("dsadsa");
     checkNewValues();
    
 });
