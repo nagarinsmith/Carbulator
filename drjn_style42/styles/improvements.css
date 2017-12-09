@@ -68,3 +68,8 @@
   color: #1F1F20;
   opacity: 0.9;
 }
+/*POST LOGIN style*/
+.postNav{
+  background-color: #567EBB;
+  color: white;
+}
