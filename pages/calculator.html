@@ -8,11 +8,15 @@
     <link rel="icon" href="http://via.placeholder.com/32x32">
     <title>Login</title>
     <link rel="stylesheet" href="styles/bootstrap4.min.css">
+    <link rel="stylesheet" href="styles/improvements.css"
 </head>
+<div>
+    <img src="img/backfinal.jpg" style="position: fixed; width: 100vw; height:100vh"/>
+</div>
 <body>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-    <a class="navbar-brand" href="#"><img src="http://via.placeholder.com/100x100" width="30" height="30"
+<nav class="navbar navbar-expand-sm navbar-dark editNav">
+    <a class="navbar-brand" style="color:#2B4C7E" href="#"><img src="http://via.placeholder.com/100x100" width="30" height="30"
                                           class="d-inline-block align-top mr-2" alt="">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,15 +24,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Calculator</a>
-            <a class="nav-item nav-link" href="#">Statistics</a>
-            <a class="nav-item nav-link" href="#">Log out</a>
+            <a class="nav-item nav-link active"  style="color:#2B4C7E" href="#">Calculator</a>
+            <a class="nav-item nav-link" style="color:#2B4C7E" href="#">Statistics</a>
+            <a class="nav-item nav-link" style="color:#2B4C7E" href="#">Log out</a>
         </div>
     </div>
 </nav>
 
 <!-- Calculator -->
-<div class="container-fluid">
+<div class="container-fluid" style="color: white;">
     <div class="row mt-3 align-content-center">
         <form class="col-md-6 my-1" id = "calculator_form">
             <div class="form-group">
@@ -39,9 +43,9 @@
                 <label for="bl">Blood sugar:</label>
                 <input type="number" class="form-control" id="bl">
             </div>
-            <button type="submit" class="btn btn-block btn-primary">Calculate</button>
+            <button type="submit" class="btn btn-block btn-primary editButton">Calculate</button>
             <div class="form-group">
-                <label for="insulin">Recommended insulin:</label>
+                <label for="insulin" class="mt-4">Recommended insulin:</label>
                 <input type="number" readonly class="form-control-plaintext" id="insulin">
             </div>
         </form>
@@ -67,8 +71,14 @@
                     <option>0.1</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-block btn-primary">Save</button>
+            <button type="submit" class="btn btn-block btn-primary editButton">Save</button>
         </form>
+        <div class="card ml-5 mt-2 cardMod">
+          <div class="card-body">
+            <h4 class="card-title"> What now? </h4>
+            <p class="card-text"> Once you give us the required data we will provide the insulin intake you need. </p>
+          </div>
+        </div>
     </div>
 </div>
 
