@@ -20,6 +20,9 @@ app.config(function($routeProvider) {
     .when("/add-glic", {
         templateUrl : "./pages/add-values.html"
     })
+    .when("/drj",{
+        templateUrl : "./drjn_style42/styleCalc.html"
+    })
     /*.otherwise({
         templateUrl : "./pages/not-found.html"
     })*/
