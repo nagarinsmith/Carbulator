@@ -10,4 +10,6 @@ $(document).ready(function(){
     };
 
     firebase.initializeApp(config);
+
+    var rootRef = firebase.database().ref();
 })

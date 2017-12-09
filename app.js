@@ -17,6 +17,9 @@ app.config(function($routeProvider) {
     .when("/register", {
         templateUrl : "./pages/register.html"
     })
+    .when("/add-glic", {
+        templateUrl : "./pages/add-values.html"
+    })
     .otherwise({
         templateUrl: "./pages/login.html"
     })
