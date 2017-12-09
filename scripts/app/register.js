@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-    $("#registerButton").click(function(){
+    $("#registerForm").on("submit",event=>{
+        event.preventDefault();
 
         var email = $("#email").val();
         var reemail = $("#reemail").val();

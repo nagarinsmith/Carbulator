@@ -27,7 +27,8 @@ $(document).ready(function () {
         return false;
     });
 
-    $("#submitButton").click(function(){
+    $("#glicForm").on("submit",event =>{
+        event.preventDefault();
         var user = firebase.auth().currentUser;
         var first_name_in = $("#first_name").val();
         var last_name_in = $("#last_name").val();
@@ -46,6 +47,7 @@ $(document).ready(function () {
             }).catch(function(error){
                 console.log(error);
             })
+            console.log("nextStep",user.uid);
             firebase.database().ref('users/' + user.uid + "/glicData").set({
                 glic_min: glic_min_in,
                 glic_max: glic_max_in,
@@ -55,7 +57,8 @@ $(document).ready(function () {
             }).catch(function(error){
                 console.log(error);
             }).then(function(){
-                window.location.href = "post-login.html";
+                console.log("nextStep2");
+                window.location.href = "../post-login.html";
             })
         }
         else{
