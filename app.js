@@ -3,7 +3,7 @@ app.config(function($routeProvider) {
     
     $routeProvider
     .when("/", {
-        templateUrl : "./pages/login.html"
+        templateUrl : "./index.html"
     })
     .when("/login", {
         templateUrl : "./pages/login.html"
