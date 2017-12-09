@@ -38,5 +38,23 @@
 }
 /*NAVBAR STYLE*/
 .editNav{
-  background-color: #FFFF;
+  background-color: #DCE0E6;
+  opacity: 0.9;
+}
+
+.editButton{
+  margin-bottom: 2vh;
+  opacity: 0.95;
+  background-color: #567EBB;
+  border-color: #2B4C7E;
+}
+
+.editButton:hover{
+  background-color: #2B4C7E;
+  border-color: #1F1F20;
+}
+
+.cardMod{
+  color: #1F1F20;
+  opacity: 0.9;
 }
