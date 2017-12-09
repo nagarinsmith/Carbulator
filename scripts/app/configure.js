@@ -47,7 +47,6 @@ $(document).ready(function () {
             }).catch(function(error){
                 console.log(error);
             })
-
             firebase.database().ref('users/' + user.uid + "/glicData").set({
                 glic_min: glic_min_in,
                 glic_max: glic_max_in,

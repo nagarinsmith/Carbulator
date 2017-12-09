@@ -32,6 +32,9 @@ app.config(function($routeProvider) {
     .when("/addValues", {
         templateUrl : "./pages/add-values.html"
     })
+    .when("/calculate", {
+        templateUrl : "./pages/calculator.html"
+    })
     /*.otherwise({
         templateUrl : "./pages/not-found.html"
     })*/
