@@ -53,6 +53,16 @@
   background-color: #2B4C7E;
   border-color: #1F1F20;
 }
+/*LOGIN STYLE*/
+.editRegister{
+  background-color: #606D80;
+  border-color: #1F1F20;
+}
+
+.editRegister:hover{
+  background-color: #1F1F20;
+  border-color: #606D80;
+}
 
 .cardMod{
   color: #1F1F20;
