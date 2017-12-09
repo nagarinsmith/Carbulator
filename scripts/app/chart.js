@@ -82,6 +82,9 @@ function addValues(){
 	firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             firebase.database().ref('/users').child(user.uid).child("glicValues").on('value', function(snapshot) {
+				dataPoints = []
+				maxPoints = []
+				minPoints = []
 				console.log(snapshot.val());
                for(e in snapshot.val()){
 					var vl = snapshot.val()[e];
