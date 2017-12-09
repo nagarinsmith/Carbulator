@@ -1,7 +1,6 @@
 function addValues(){
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            console.log("logged in");
            firebase.database().ref('users/' + user.uid + "/glicValues").push({
               val: Math.floor((Math.random() * 500) + 1),
               time: Date.now()
@@ -12,7 +11,24 @@ function addValues(){
     });
 }
 
+function addFixedValue(){
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+           firebase.database().ref('users/' + user.uid + "/glicValues").push({
+              val: ,
+              time: 
+            }).catch(function(error){
+                console.log(error);
+            })
+        }
+    });
+}
 
 $(document).ready(function(){
-    addValues();
+    $("").click(function(){
+        addValues();
+    })
+    $("").click(function(){
+        addFixedValue();
+    })
 });
