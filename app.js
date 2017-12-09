@@ -35,7 +35,7 @@ app.config(function($routeProvider) {
     .when("/calculate", {
         templateUrl : "./pages/calculator.html"
     })
-    /*.otherwise({
+    .otherwise({
         templateUrl : "./pages/not-found.html"
-    })*/
+    })
 });
