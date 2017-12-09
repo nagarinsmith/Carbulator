@@ -50,15 +50,13 @@ $(document).ready(function(){
         event.preventDefault();
         if(carbs && bl && carbs_to_insulin && bl_to_insulin && bl_target && insulin_precision){
             var result = (carbs / carbs_to_insulin) + ((bl-bl_target)/bl_to_insulin);
-            temp = result;
+            
             result = Math.round(result/insulin_precision);
             result *= insulin_precision;
-            console.log(temp);
+        
     
             $("#insulin").val(result);
         }
-        else{
-            console.log("nth");
-        }
+       
     })
 });

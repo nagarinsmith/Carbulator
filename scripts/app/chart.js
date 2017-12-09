@@ -85,7 +85,7 @@ function addValues(){
 				dataPoints = []
 				maxPoints = []
 				minPoints = []
-				console.log(snapshot.val());
+				
                for(e in snapshot.val()){
 					var vl = snapshot.val()[e];
 					dataPoints.push({x:vl.time, y:vl.val});
@@ -95,9 +95,7 @@ function addValues(){
 			drawChart(dataPoints,maxPoints,minPoints);
             })
         }
-        else{
-            console.log('in');
-        }
+       
     });
 }
 
