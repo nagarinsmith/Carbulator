@@ -89,9 +89,11 @@ function addValues(){
                for(e in snapshot.val()){
 					var vl = snapshot.val()[e];
 					var d = new Date(vl.time);
-					dataPoints.push({x:d, y:vl.val});
-					minPoints.push({x:d , y:80});
-					maxPoints.push({x:d , y:200});
+					if(Date.now() - vl.time < 86400000){
+						dataPoints.push({x:d, y:vl.val});
+						minPoints.push({x:d , y:80});
+						maxPoints.push({x:d , y:200});
+					}
 			
                }
 			drawChart(dataPoints,maxPoints,minPoints);
