@@ -1,11 +1,10 @@
 $(document).ready(function(){
-    console.log("script loaded");
     $("#loginForm").on("submit",event =>{
         event.preventDefault();
         var email = $("#email").val();
         var password = $("#password").val();
         firebase.auth().signInWithEmailAndPassword(email, password).then(function(user){
-            console.log("plm");
+   
             window.location.href = "#!/post-login";
         }).catch(function(error) {
             // Handle Errors here.

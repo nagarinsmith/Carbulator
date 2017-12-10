@@ -82,15 +82,16 @@ function addValues(){
 	firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             firebase.database().ref('/users').child(user.uid).child("glicValues").on('value', function(snapshot) {
-				dataPoints = []
-				maxPoints = []
-				minPoints = []
-				
+				dataPoints = [];
+				maxPoints = [];
+				minPoints = [];
+				var index = 0;
                for(e in snapshot.val()){
 					var vl = snapshot.val()[e];
-					dataPoints.push({x:vl.time, y:vl.val});
-					minPoints.push({x:vl.time, y:80});
-					maxPoints.push({x:vl.time, y:200});
+					dataPoints.push({x:5 * index, y:vl.val});
+					minPoints.push({x:5 * index, y:80});
+					maxPoints.push({x:5 * index, y:200});
+					index ++;
                }
 			drawChart(dataPoints,maxPoints,minPoints);
             })
