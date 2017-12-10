@@ -77,9 +77,6 @@
 /*CHART STYLE*/
 .chart{
   opacity: 0.9;
-  position: relative;
-  top: 5rem;
-  left: 10rem;
 }
 
 .cardChart{
