@@ -7,14 +7,53 @@ function initiateInput(){
                  $("#bl_target").val(snapshot.val().bl_target) ;
                  $("#insulin_precision").val(snapshot.val().insulin_precision) ;
             });
+        var ref = snapshot.val();
+        if(ref.carbs_to_insulin && ref.bl_to_insulin && ref.bl_target && ref.insulin_precision){
+            return true;
+        }
+        else{
+            return false;
+        }
         }
     });
 }
 
 $(document).ready(function(){
 
-    initiateInput();
-    
+    if(initiateInput()){
+        form2 = "#configure_form";
+        form1 = "#calculator_form";
+    }
+    else{
+        form2 = "#calculator_form";
+        form1 = "#configure_form";
+    }
+
+    $(form1).hide();
+    $('#nextButton').click(function () {
+                $(form1).toggle('slide', {
+                direction: 'right',
+                complete:function(){
+                     $(form2).toggle('slide', {
+                         direction: 'left'
+                     });
+                }
+            });
+            
+        return false;
+    });
+    $('#backButton').click(function () {
+                $(form2).toggle('slide', {
+                direction: 'right',
+                complete:function(){
+                     $(form1).toggle('slide', {
+                         direction: 'left'
+                     });
+                }
+            });
+            
+        return false;
+    });
 
 
     $("#configure_form").on("submit",event =>{

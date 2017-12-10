@@ -55,7 +55,7 @@ $(document).ready(function () {
                 console.log(error);
             }).then(function(){
                
-                window.location.href = "/post-login";
+                window.location.href = "#!/post-login";
             })
         }
        

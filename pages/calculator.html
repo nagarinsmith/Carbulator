@@ -34,7 +34,7 @@
 <!-- Calculator -->
 <div class="container-fluid" style="color: white;">
     <div class="row mt-3 align-content-center">
-      <form class="col-md-6 my-1" id="configure_form">
+      <form class="col-5 my-1" id="configure_form">
           <div class="form-group">
               <label for="bl_target">Target blood sugar:</label>
               <input type="number" class="form-control" id="bl_target">
@@ -55,10 +55,11 @@
                   <option>0.1</option>
               </select>
           </div>
+          <button class="btn btn-block btn-primary editButton" id="nextButton">Next</button>
           <button type="submit" class="btn btn-block btn-primary editButton">Save</button>
       </form>
       
-        <form class="col-md-6 my-1" id="calculator_form">
+        <form class="col-5 my-1" id="calculator_form">
             <div class="form-group">
                 <label for="carbs">Carbs:</label>
                 <input type="number" class="form-control" id="carbs">
@@ -68,6 +69,7 @@
                 <input type="number" class="form-control" id="bl">
             </div>
             <button type="submit" class="btn btn-block btn-primary editButton">Calculate</button>
+            <button class="btn btn-block btn-primary editButton" id="backButton">Configure</button>
             <div class="form-group">
                 <label for="insulin" class="mt-4">Recommended insulin:</label>
                 <input type="number" readonly class="form-control-plaintext" id="insulin">
@@ -86,6 +88,7 @@
 </div>
 
 <script src="scripts/lib/jquery-3.2.1.min.js"></script>
+<script src="scripts/lib/jquery-ui.min.js"></script>
 <script src="scripts/lib/firebase.js"></script>
 <script src="scripts/app/firebaseConfig.js"></script>
 <script src="scripts/app/authCheck.js"></script>
