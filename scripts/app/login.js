@@ -1,4 +1,10 @@
 $(document).ready(function(){
+
+    $("#registerButton").click(function(){
+        console.log("reg");
+        window.location.href = "#!/register"
+    })
+
     $("#loginForm").on("submit",event =>{
         event.preventDefault();
         var email = $("#email").val();

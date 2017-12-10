@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+    $("#backButton").click(function(){
+        window.location.href = "#!/";
+    })
+
     $("#registerForm").on("submit",event=>{
         event.preventDefault();
 
@@ -10,7 +14,7 @@ $(document).ready(function(){
 
         if(email && password && password == repassword && email == reemail){
             firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
-            window.location.href = "configure-account.html";
+            window.location.href = "#!/";
             })
             .catch(function(error) {
             // Handle Errors here.

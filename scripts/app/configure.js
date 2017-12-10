@@ -52,7 +52,7 @@ $(document).ready(function () {
                 bl_target : bl_target,
                 insulin_precision : insulin_precision
             }).catch(function(error){
-                console.log(error);
+                console.log(error + "plm");
             }).then(function(){
                
                 window.location.href = "#!/post-login";
