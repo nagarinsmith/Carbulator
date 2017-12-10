@@ -34,6 +34,30 @@
 <!-- Calculator -->
 <div class="container-fluid" style="color: white;">
     <div class="row mt-3 align-content-center">
+      <form class="col-md-6 my-1" id="configure_form">
+          <div class="form-group">
+              <label for="bl_target">Target blood sugar:</label>
+              <input type="number" class="form-control" id="bl_target">
+          </div>
+          <div class="form-group">
+              <label for="carbs_to_insulin">Carbs to insulin ratio:</label>
+              <input type="number" class="form-control" id="carbs_to_insulin">
+          </div>
+          <div class="form-group">
+              <label for="bl_to_insulin">Blood sugar to insulin ratio:</label>
+              <input type="number" class="form-control" id="bl_to_insulin">
+          </div>
+          <div class="form-group">
+              <label for="insulin_precision">Insulin precision</label>
+              <select class="form-control" id="insulin_precision">
+                  <option>1</option>
+                  <option>0.5</option>
+                  <option>0.1</option>
+              </select>
+          </div>
+          <button type="submit" class="btn btn-block btn-primary editButton">Save</button>
+      </form>
+      
         <form class="col-md-6 my-1" id="calculator_form">
             <div class="form-group">
                 <label for="carbs">Carbs:</label>
@@ -50,29 +74,7 @@
             </div>
         </form>
 
-        <form class="col-md-6 my-1" id="configure_form">
-            <div class="form-group">
-                <label for="bl_target">Target blood sugar:</label>
-                <input type="number" class="form-control" id="bl_target">
-            </div>
-            <div class="form-group">
-                <label for="carbs_to_insulin">Carbs to insulin ratio:</label>
-                <input type="number" class="form-control" id="carbs_to_insulin">
-            </div>
-            <div class="form-group">
-                <label for="bl_to_insulin">Blood sugar to insulin ratio:</label>
-                <input type="number" class="form-control" id="bl_to_insulin">
-            </div>
-            <div class="form-group">
-                <label for="insulin_precision">Insulin precision</label>
-                <select class="form-control" id="insulin_precision">
-                    <option>1</option>
-                    <option>0.5</option>
-                    <option>0.1</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-block btn-primary editButton">Save</button>
-        </form>
+
         <div class="card ml-5 mt-2 cardMod">
             <div class="card-body">
                 <h4 class="card-title"> What now? </h4>
