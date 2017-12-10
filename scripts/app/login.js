@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
     $("#registerButton").click(function(){
-        console.log("reg");
         window.location.href = "#!/register"
     })
 
@@ -10,7 +9,7 @@ $(document).ready(function(){
         var email = $("#email").val();
         var password = $("#password").val();
         firebase.auth().signInWithEmailAndPassword(email, password).then(function(user){
-   
+
             window.location.href = "#!/post-login";
         }).catch(function(error) {
             // Handle Errors here.

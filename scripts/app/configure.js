@@ -1,8 +1,8 @@
 $(document).ready(function () {
     $('#glicForm').hide();
     $('#nextButton').click(function () {
-       
-        
+
+
                 $('#personalForm').toggle('slide', {
                 direction: 'left',
                 complete:function(){
@@ -11,7 +11,7 @@ $(document).ready(function () {
                      });
                 }
             });
-            
+
         return false;
     });
     $('#backButton').click(function () {
@@ -23,7 +23,7 @@ $(document).ready(function () {
                      });
                 }
             });
-            
+
         return false;
     });
 
@@ -52,12 +52,12 @@ $(document).ready(function () {
                 bl_target : bl_target,
                 insulin_precision : insulin_precision
             }).catch(function(error){
-                console.log(error + "plm");
+                console.log(error);
             }).then(function(){
-               
+
                 window.location.href = "#!/post-login";
             })
         }
-       
+
     })
 });
