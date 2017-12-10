@@ -6,7 +6,7 @@ function drawChart(dataPoints,maxPoints,minPoints){
 		text: "Glucose level"
 	},
 	axisX:{
-	
+		valueFormatString: "DD-MMM HH:mm",
 		crosshair: {
 			enabled: true,
 			snapToDataPoint: true
@@ -85,13 +85,14 @@ function addValues(){
 				dataPoints = [];
 				maxPoints = [];
 				minPoints = [];
-				var index = 0;
+			
                for(e in snapshot.val()){
 					var vl = snapshot.val()[e];
-					dataPoints.push({x:5 * index, y:vl.val});
-					minPoints.push({x:5 * index, y:80});
-					maxPoints.push({x:5 * index, y:200});
-					index ++;
+					var d = new Date(vl.time);
+					dataPoints.push({x:d, y:vl.val});
+					minPoints.push({x:d , y:80});
+					maxPoints.push({x:d , y:200});
+			
                }
 			drawChart(dataPoints,maxPoints,minPoints);
             })
