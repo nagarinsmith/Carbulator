@@ -1,11 +1,6 @@
-var glucLev = 100;
-
 function addValues(){
     firebase.auth().onAuthStateChanged(function(user) {
-        glucLev = glucLev + Math.floor((Math.random() * 20) + 1)
-        if(Math.round(Math.random()*1 +1) == 1){
-            glucLev *= -1;
-        }
+        glucLev = Math.floor((Math.random() * 300) + 1)
           
         if (user) {
            firebase.database().ref('users/' + user.uid + "/glicValues").push({
