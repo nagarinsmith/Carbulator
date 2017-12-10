@@ -27,7 +27,7 @@
 }
 
 #doc{
-  
+
   margin-top: 5vh;
 }
 
@@ -71,5 +71,24 @@
 /*POST LOGIN style*/
 .postNav{
   background-color: #567EBB;
+  color: white;
+}
+
+/*CHART STYLE*/
+.chart{
+  opacity: 0.9;
+  position: relative;
+  top: 5rem;
+  left: 10rem;
+}
+
+.cardChart{
+  opacity: 0.9;
+  background-color: transparent;
+  border: none;
+}
+
+.cardChart{
+  text-align: center;
   color: white;
 }
