@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Carbulator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=  no">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/improvements.css">
+</head>
+
+<body>
+  <div>
+    <img src="img/backfinal.jpg" style="position:fixed; width: 100vw; height: 100vh;"/>
+  </div>
+    <div class="navbar navbar-expand-lg fixed-top navbar-light postNav">
+      <div class="container">
+        <a class="navbar-brand" style="color: white;" href="./#!/">Home</a>
+        <button class="navbar-toggler collapsed" aria-expanded="false" aria-controls="navbarResponsive" aria-label="Toggle navigation" type="button" data-toggle="collapse" data-target="#navbarResponsive1">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive1">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="color: white;" href="./#!/configure" target="_blank">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white;" href="" id="logoutButton" target="_blank">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="jumbotron" style="position: relative;">
+        <h1 class="display-4">You are already logged in! <br> Is it time for your insulin shot?</h1>
+        <p id="name"></p>
+        <p><a class="btn btn-primary btn-lg editButton" href="#">Let's start</a></p>
+    </div>
+</body>
+
+
+<!-- Scripts -->
+<script src="scripts/lib/jquery-3.2.1.min.js"></script>
+<script src="scripts/lib/firebase.js"></script>
+<script src="scripts/app/firebaseConfig.js"></script>
+<script src="scripts/app/authCheck.js"></script>
+<script src="scripts/app/logout.js"></script>
+<script src="scripts/app/post-login.js"></script>
+</html>
